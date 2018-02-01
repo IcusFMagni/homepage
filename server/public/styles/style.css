@@ -1,0 +1,49 @@
+body {
+    font-family:Courier New, Courier, monospace;
+    background-color: #A9D2E5
+}
+
+.section {
+    width: 100%;
+}
+.box {
+    color: #B8336A;
+    font-size: 2em;
+}
+
+.first-box {
+    background-color: #67597A;
+}
+
+.second-box {
+    background-color: #544E61;
+    text-align: center;
+}
+.third-box {
+    background-color: plum;
+}
+.row {
+    height: 800px;
+    background-color: lightcyan;
+}
+
+p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.musicPlayer {
+    background-color: #67597A
+    
+}
+
+.button {
+    border-style: ridge;
+    border-color: #A9D2E5;
+    border-width: 10px;
+    background-color: #A9D2E5;
+}
+
+.note {
+    background-color: #A9D2E5
+}

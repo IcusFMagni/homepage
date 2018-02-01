@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Angular Material Fun!</title>
+    <!-- Angular and Angular-Route -->
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+
+    <!-- Angular Material -->
+    <link href="vendors/angular-material.css" rel="stylesheet" type="text/css">
+    <script src="vendors/angular-animate.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-aria.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-messages.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-material.min.js" charset="utf-8"></script>
+
+    <!-- Client Side -->
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="scripts/material.controller.js" charset="utf-8"></script>
+
+    <!-- CSS -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body ng-app="myApp">
+    <div class="section">
+        <div ng-controller="MaterialController as vm">
+            <div layout="column">
+                <div layout="row" layout-xs="column">
+                    <div flex="20" class="first-box box">
+
+                    </div>
+                    <div flex class="second-box box">
+                        <h4>Welcome to my webpage</h4>
+                    </div>
+                    <div flex="20" class="first-box box">
+                    </div>
+                </div>
+                <div flex class="bellowheader box">
+                    <p>It's under construction currently but someday I hope it will be a welcoming place.</p>
+                    <p>In the meantime why don't you make a little beat!</p>
+                    <p>Thank You</p>
+                </div>
+                <div class="musicPlayer" align="center">
+                    <div flex align="center">
+                        <md-button class="button" ng-click="vm.playTrack()">Play</md-button>
+                        <md-button class="button" ng-click="vm.stopTrack()">Stop</md-button>
+                    </div>
+                    <div flex>
+                        <table>
+                            <tr>
+                                <td>Hats</td>
+                                <td class="note" ng-repeat="note in vm.hats">{{note.on}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
