@@ -33,8 +33,12 @@ p {
 }
 
 .musicPlayer {
-    background-color: #67597A
-    
+    background-color: #67597A;
+
+    border-style: outset;
+    border-width: 10px;
+    border-radius: 3px;
+    margin: 100px;
 }
 
 .button {
@@ -44,6 +48,24 @@ p {
     background-color: #A9D2E5;
 }
 
-.note {
+.label {
     background-color: #A9D2E5
+}
+
+td {
+    border-style: outset;
+    border-width: 2px;
+}
+
+.note1 {
+    background-color: #A9D2E5;
+    width: 10px;
+    height: 10px
+}
+
+.note0 {
+    background-color: #544E61;
+    width: 10px;
+    height: 10px;
+
 }

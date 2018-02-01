@@ -14,6 +14,23 @@ myApp.controller('MaterialController', function ($mdDialog) {
         return array
     }
 
+    self.playableScore = function (array) {
+        let score = []
+        for (let i = 0; i < array.length; i++) {
+            score.push(array[i].on)  
+        }
+        return score
+    }
+
+    self.editnote = function (track, beat) {
+        console.log (track[beat.position].on)
+        if(track[beat.position].on ==0){
+            track[beat.position].on = 1 
+        } else {
+            track[beat.position].on = 0
+        }
+    }
+
     self.kick = self.initScore()
     self.hats = self.initScore()
 
@@ -25,13 +42,13 @@ myApp.controller('MaterialController', function ($mdDialog) {
     }
 
     self.playTrack = function () {
-        // if (!self.isPlaying) {
+        if (!self.isPlaying) {
             self.isPlaying = true;
             let track = {
                 tempo: 135,
                 tracks: {
-                    Hats: self.hats,
-                    Kick: self.kick
+                    Hats: self.playableScore(self.hats),
+                    Kick: self.playableScore(self.kick)
 
                 }
             }
@@ -42,7 +59,7 @@ myApp.controller('MaterialController', function ($mdDialog) {
             // if (!self.isLooping) {
             //     // setTimeout(function () { self.isPlaying = false }, self.songLength / 2 / track.tempo * 60 * 1000 + 50)
             // }
-        // }
+        }
     }
 
 

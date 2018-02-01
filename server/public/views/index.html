@@ -32,7 +32,7 @@
 
                     </div>
                     <div flex class="second-box box">
-                        <h4>Welcome to my webpage</h4>
+                        <h4>Danika Ragnhild</h4>
                     </div>
                     <div flex="20" class="first-box box">
                     </div>
@@ -42,18 +42,26 @@
                     <p>In the meantime why don't you make a little beat!</p>
                     <p>Thank You</p>
                 </div>
-                <div class="musicPlayer" align="center">
-                    <div flex align="center">
-                        <md-button class="button" ng-click="vm.playTrack()">Play</md-button>
-                        <md-button class="button" ng-click="vm.stopTrack()">Stop</md-button>
-                    </div>
-                    <div flex>
-                        <table>
-                            <tr>
-                                <td>Hats</td>
-                                <td class="note" ng-repeat="note in vm.hats">{{note.on}}</td>
-                            </tr>
-                        </table>
+                <div align="center">
+                    <div class="musicPlayer" align="center">
+                        <br>
+                        <div flex align="center">
+                            <md-button class="button" ng-click="vm.playTrack()">Play</md-button>
+                            <md-button class="button" ng-click="vm.stopTrack()">Stop</md-button>
+                        </div>
+                        <div flex>
+                            <table>
+                                <tr>
+                                    <td class="label">hats</td>
+                                    <td ng-click="vm.editnote(vm.hats, note)" class="note{{note.on}}" ng-repeat="note in vm.hats"></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">kick</td>
+                                    <td ng-click="vm.editnote(vm.kick, note)" class="note{{note.on}}" ng-repeat="note in vm.kick"></td>
+                                </tr>
+                            </table>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>
