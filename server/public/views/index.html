@@ -28,40 +28,64 @@
         <div ng-controller="MaterialController as vm">
             <div layout="column">
                 <span>
-                <h1>Danika Ragnhild</h4>
-                    <md-nav-bar>
-                        <md-nav-item md-nav-click="goto('page1')" name="page1">Page One</md-nav-item>
-                    </md-nav-bar>
+                    <h1>Danika Ragnhild</h4>
+                        <md-nav-bar>
+                            <md-nav-item md-nav-click="vm.view = 'work'" name="work">Work</md-nav-item>
+                            <md-nav-item md-nav-click="vm.view = 'music'" name="music">Music</md-nav-item>
+                            <md-nav-item md-nav-click="vm.view = 'toys'" name="toys">Toys</md-nav-item>
+                            <md-nav-item md-nav-click="vm.view = 'contact'" name="contact">Contact</md-nav-item>
+                        </md-nav-bar>
                 </span>
+                <div ng-show="vm.view === 'work'">
 
-                    <div align="center" flex class="bellowheader box">
-                        <p>It's under construction currently but someday I hope it will be a welcoming place.</p>
-                        <p>In the meantime why don't you make a little beat!</p>
-                        <a href="https://github.com/IcusFMagni/">Or visit my github.</a>
-                        <p>Thank You</p>
+                </div>
+                <div ng-show="vm.view ==='music'"><iframe class="soundcloud" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/5113051&amp;color=%23a9d2e5&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe></div>
+                <div ng-show="vm.view === 'contact'">
+                    <div align="center" class="contact">
+                        <br>
+                        <p>Danika Ragnhild</p>
+                        <p>315 SE Main St, Apt 522</p>
+                        <p>Minneapolis, MN 55414</p>
+                        <br>
+                        <p>Phone: 218-849-4341</p>
+                        <p>Email: danika.ragnhild@gmail.com</p>
+                        <span>
+                            <p>
+                                <a href="https://www.linkedin.com/in/danika-ragnhild/">
+                                    <img border="0" class="icon" src="../images/linkedin.png">
+                                </a> 
+                                <a href="https://github.com/IcusFMagni/">
+                                    <img class="icon" src="../images/github.svg">
+                                </a>
+                            </p>
+                        </span>
+                        <br>
+                        <br>
                     </div>
-                    <div align="center">
-                        <div class="musicPlayer" align="center">
+                </div>
+
+                <div ng-show="vm.view === 'toys'" align="center">
+                    <div class="musicPlayer" align="center">
+                        <br>
+                        <div flex align="center">
+                            <md-button class="button" ng-click="vm.playTrack()">Play</md-button>
+                            <md-button class="button" ng-click="vm.stopTrack()">Stop</md-button>
+                        </div>
+                        <div flex>
+                            <table>
+                                <tr>
+                                    <td class="label">hats</td>
+                                    <td ng-click="vm.editnote(vm.hats, note)" class="note{{note.on}}" ng-repeat="note in vm.hats"></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">kick</td>
+                                    <td ng-click="vm.editnote(vm.kick, note)" class="note{{note.on}}" ng-repeat="note in vm.kick"></td>
+                                </tr>
+                            </table>
                             <br>
-                            <div flex align="center">
-                                <md-button class="button" ng-click="vm.playTrack()">Play</md-button>
-                                <md-button class="button" ng-click="vm.stopTrack()">Stop</md-button>
-                            </div>
-                            <div flex>
-                                <table>
-                                    <tr>
-                                        <td class="label">hats</td>
-                                        <td ng-click="vm.editnote(vm.hats, note)" class="note{{note.on}}" ng-repeat="note in vm.hats"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="label">kick</td>
-                                        <td ng-click="vm.editnote(vm.kick, note)" class="note{{note.on}}" ng-repeat="note in vm.kick"></td>
-                                    </tr>
-                                </table>
-                                <br>
-                            </div>
                         </div>
                     </div>
+                </div>
 
             </div>
         </div>

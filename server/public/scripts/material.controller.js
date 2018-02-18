@@ -3,7 +3,7 @@ myApp.controller('MaterialController', function ($mdDialog) {
 
     var self = this;
 
-
+    this.view = ""
 
     self.initScore = function (){
         let array = []

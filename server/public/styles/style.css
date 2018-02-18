@@ -13,9 +13,31 @@ body {
 }
 
 h1 {
-    margin: 40px;
+    margin-left: 10%;
 }
 
+.md-nav-bar {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #A9D2E5;
+}
+
+.contact {
+    background-color: #A9D2E5;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.soundcloud {
+    height: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+.icon {
+    width: 40px;
+}
 
 .section {
     width: 100%;
