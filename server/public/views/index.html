@@ -30,18 +30,69 @@
                 <span>
                     <h1>Danika Ragnhild</h4>
                         <md-nav-bar>
-                            <md-nav-item md-nav-click="vm.view = 'work'" name="work">Work</md-nav-item>
+                            <md-nav-item md-nav-click="vm.view = 'work'" name="work">Selected Works</md-nav-item>
                             <md-nav-item md-nav-click="vm.view = 'music'" name="music">Music</md-nav-item>
-                            <md-nav-item md-nav-click="vm.view = 'toys'" name="toys">Toys</md-nav-item>
+                            <md-nav-item md-nav-click="vm.view = 'toys'" name="toys">Fun Things</md-nav-item>
                             <md-nav-item md-nav-click="vm.view = 'contact'" name="contact">Contact</md-nav-item>
                         </md-nav-bar>
                 </span>
+                <div class="main" layout="column">
                 <div ng-show="vm.view === 'work'">
+                    <div layout="row" class="jobBox">
+                        <div flex="33" class="box">
+                            <img class="workPicture" src="../images/bathyspheres.png">
+                        </div>
+                        <div flex="66">
 
+                            <a ng-href="http://www.bathyspheres.com">
+                                <h2>Bathyspheres</h2>
+                            </a>
+                            <ul>
+                                <li>
+                                    During my time making music professionally I realized that having cloud based electronic music software would be beneficial.
+                                </li>
+                                <li>
+                                    Bathyspheres allows a user to login, load up a project they’ve shared with a collaborator, and get right to making music.
+                                    One user might be working on writing the music while another simultaneously edits the
+                                    synth to get that perfect sound.
+                                </li>
+                                <li>
+                                    Technologies used are PostgreSQL, JavaScript, AngularJS, AngularJS Material, Web Audio Api, Node, HTML, and CSS.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div layout="row" class="jobBox">
+                        <div flex="33" class="box">
+                            <img class="workPicture" src="../images/hustle.png">
+                        </div>
+                        <div flex="66">
+
+                            <a ng-href="https://createyourhustle.herokuapp.com">
+                                <h2>Hustle</h2>
+                            </a>
+                            <ul>
+                                <li>
+                                    There is no way for skilled people to connect and work on side projects together.
+                                </li>
+                                <li>
+                                    Hustle allows users to log-in, connect with other people to collaborate on projects together. While working on a project
+                                    together users can track project’s progress and communicate through Hustle. Finally users
+                                    can rate how well the project and collaborators worked.
+                                </li>
+                                <li>
+                                    Technologies used are JavaScript, AngularJS, AngularJS Material, Node, HTML, CSS, OAuth2.0 for Facebook and Google, NodeMailer.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div ng-show="vm.view ==='music'"><iframe class="soundcloud" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/5113051&amp;color=%23a9d2e5&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe></div>
+                <div ng-show="vm.view ==='music'">
+                    <iframe class="soundcloud" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/5113051&amp;color=%23a9d2e5&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                </div>
                 <div ng-show="vm.view === 'contact'">
                     <div align="center" class="contact">
+                        <br>
                         <br>
                         <p>Danika Ragnhild</p>
                         <p>315 SE Main St, Apt 522</p>
@@ -53,12 +104,13 @@
                             <p>
                                 <a href="https://www.linkedin.com/in/danika-ragnhild/">
                                     <img border="0" class="icon" src="../images/linkedin.png">
-                                </a> 
+                                </a>
                                 <a href="https://github.com/IcusFMagni/">
                                     <img class="icon" src="../images/github.svg">
                                 </a>
                             </p>
                         </span>
+                        <br>
                         <br>
                         <br>
                     </div>
@@ -86,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
             </div>
         </div>
     </div>
