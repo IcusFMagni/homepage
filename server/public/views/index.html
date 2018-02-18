@@ -27,44 +27,42 @@
     <div class="section">
         <div ng-controller="MaterialController as vm">
             <div layout="column">
-                <div layout="row" layout-xs="column">
-                    <div flex="20" class="first-box box">
+                <span>
+                <h1>Danika Ragnhild</h4>
+                    <md-nav-bar>
+                        <md-nav-item md-nav-click="goto('page1')" name="page1">Page One</md-nav-item>
+                    </md-nav-bar>
+                </span>
 
+                    <div align="center" flex class="bellowheader box">
+                        <p>It's under construction currently but someday I hope it will be a welcoming place.</p>
+                        <p>In the meantime why don't you make a little beat!</p>
+                        <a href="https://github.com/IcusFMagni/">Or visit my github.</a>
+                        <p>Thank You</p>
                     </div>
-                    <div flex class="second-box box">
-                        <h4>Danika Ragnhild</h4>
-                    </div>
-                    <div flex="20" class="first-box box">
-                    </div>
-                </div>
-                <div align="center" flex class="bellowheader box">
-                    <p>It's under construction currently but someday I hope it will be a welcoming place.</p>
-                    <p>In the meantime why don't you make a little beat!</p>
-                    <a href="https://github.com/IcusFMagni/">Or visit my github.</a>
-                    <p>Thank You</p>
-                </div>
-                <div align="center">
-                    <div class="musicPlayer" align="center">
-                        <br>
-                        <div flex align="center">
-                            <md-button class="button" ng-click="vm.playTrack()">Play</md-button>
-                            <md-button class="button" ng-click="vm.stopTrack()">Stop</md-button>
-                        </div>
-                        <div flex>
-                            <table>
-                                <tr>
-                                    <td class="label">hats</td>
-                                    <td ng-click="vm.editnote(vm.hats, note)" class="note{{note.on}}" ng-repeat="note in vm.hats"></td>
-                                </tr>
-                                <tr>
-                                    <td class="label">kick</td>
-                                    <td ng-click="vm.editnote(vm.kick, note)" class="note{{note.on}}" ng-repeat="note in vm.kick"></td>
-                                </tr>
-                            </table>
+                    <div align="center">
+                        <div class="musicPlayer" align="center">
                             <br>
+                            <div flex align="center">
+                                <md-button class="button" ng-click="vm.playTrack()">Play</md-button>
+                                <md-button class="button" ng-click="vm.stopTrack()">Stop</md-button>
+                            </div>
+                            <div flex>
+                                <table>
+                                    <tr>
+                                        <td class="label">hats</td>
+                                        <td ng-click="vm.editnote(vm.hats, note)" class="note{{note.on}}" ng-repeat="note in vm.hats"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">kick</td>
+                                        <td ng-click="vm.editnote(vm.kick, note)" class="note{{note.on}}" ng-repeat="note in vm.kick"></td>
+                                    </tr>
+                                </table>
+                                <br>
+                            </div>
                         </div>
                     </div>
-                </div>
+
             </div>
         </div>
     </div>
