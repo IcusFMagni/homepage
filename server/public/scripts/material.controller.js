@@ -1,38 +1,48 @@
 myApp.controller('MaterialController', function ($mdDialog) {
     console.log('MaterialController');
 
-    var self = this;
+    let self = this;
 
-    this.view = ""
+    self.view = ""
+    self.kick = []
+    self.hats = []
 
-    self.initScore = function (){
-        let array = []
-        for (let i = 0; i < 32; i++) {
-            
-            array.push({position:i,on:0})
-        }
-        return array
+
+    self.init = {
+        kick: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        hats: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
     }
+
+    self.initScore = function (array) {
+        let score = []
+        for (let i = 0; i < array.length; i++) {
+
+            score.push({ position: i, on: array[i] })
+        }
+        return score
+    }
+
+    this.kick = self.initScore(self.init.kick)
+    this.hats = self.initScore(self.init.hats)
 
     self.playableScore = function (array) {
         let score = []
         for (let i = 0; i < array.length; i++) {
-            score.push(array[i].on)  
+            score.push(array[i].on)
         }
         return score
     }
 
     self.editnote = function (track, beat) {
-        console.log (track[beat.position].on)
-        if(track[beat.position].on ==0){
-            track[beat.position].on = 1 
+        console.log(track[beat.position].on)
+        if (track[beat.position].on == 0) {
+            track[beat.position].on = 1
         } else {
             track[beat.position].on = 0
         }
     }
 
-    self.kick = self.initScore()
-    self.hats = self.initScore()
+
 
 
     self.stopTrack = function () {
@@ -135,7 +145,7 @@ myApp.controller('MaterialController', function ($mdDialog) {
         s.start(t);
     }
 
-    
+
 
     S.prototype.clock = function () {
         var beatLen = 60 / this.track.tempo;
