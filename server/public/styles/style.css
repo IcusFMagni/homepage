@@ -24,18 +24,26 @@ h2 {
 .md-nav-bar {
     margin-left: 10%;
     margin-right: 10%;
-    background-color: #A9D2E5;
+    background-color: rgb(208, 221, 228);
 }
 
 .contact {
-    background-color: #A9D2E5;
+    background-color: rgb(233, 230, 227);
     margin-left: 10%;
     margin-right: 10%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    width: 600px;
+}
+
+.paper {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: aliceblue;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .jobBox {
-    background-color: #A9D2E5;
+    background-color: rgb(208, 221, 228);
     margin-left: 15%;
     margin-right: 15%;
     padding: 20px;
@@ -50,10 +58,10 @@ h2 {
 }
 
 .soundcloud {
-    height: 600px;
+    background-color: rgb(208, 221, 228);
     margin-left: 10%;
     margin-right: 10%;
-    width: 80%;
+    padding: 10px;
 }
 
 .icon {
@@ -94,20 +102,20 @@ p {
     border-style: outset;
     border-width: 10px;
     border-radius: 3px;
-    border-color: #A9D2E5;
+    border-color: rgb(208, 221, 228);
     margin: 30px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .button {
     border-style: ridge;
-    border-color: #A9D2E5;
+    border-color: rgb(208, 221, 228);
     border-width: 10px;
-    background-color: #A9D2E5;
+    background-color: rgb(208, 221, 228);
 }
 
 .label {
-    background-color: #A9D2E5
+    background-color: rgb(208, 221, 228)
 }
 
 td {
@@ -116,7 +124,7 @@ td {
 }
 
 .note1 {
-    background-color: #A9D2E5;
+    background-color: rgb(208, 221, 228);
     width: 10px;
     height: 10px
 }
