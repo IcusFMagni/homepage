@@ -7,6 +7,14 @@ myApp.controller('MaterialController', function ($mdDialog) {
     self.kick = []
     self.hats = []
 
+    self.selectView  = function (view){
+        if (view != self.view) {
+            self.view = view
+        } else {
+            self.view = ''
+        }
+    }
+
 
     self.init = {
         kick: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -65,10 +73,6 @@ myApp.controller('MaterialController', function ($mdDialog) {
             let ac = new AudioContext();
             let s = new S(ac, track);
             s.start();
-            // function closeAC() { ac.close() }
-            // if (!self.isLooping) {
-            //     // setTimeout(function () { self.isPlaying = false }, self.songLength / 2 / track.tempo * 60 * 1000 + 50)
-            // }
         }
     }
 
@@ -178,36 +182,7 @@ myApp.controller('MaterialController', function ($mdDialog) {
                 }
                 this.nextScheduling += (60 / this.track.tempo);
             }
-            // creates an infinite loop of the song
             setTimeout(this.scheduler.bind(this), 100);
         } else { this.ac.close() }
     }
-    // var track = {
-    //   tempo: 135,
-    //   tracks: {
-    //     Kick: [1, 0, 0, 0, 1, 0, 0, 0,
-    //       1, 0, 0, 0, 1, 0, 0, 0,
-    //       1, 0, 0, 0, 1, 0, 0, 0,
-    //       1, 0, 0, 0, 1, 0, 0, 0],
-    //     Hats: [0, 0, 1, 0, 0, 0, 1, 0,
-    //       0, 0, 1, 0, 0, 0, 1, 1,
-    //       0, 0, 1, 0, 0, 0, 1, 0,
-    //       0, 0, 1, 0, 0, 0, 1, 0],
-    //     Bass: [36, 0, 38, 36, 36, 38, 41, 0,
-    //       36, 60, 36, 0, 39, 0, 48, 0,
-    //       36, 0, 24, 60, 40, 40, 24, 24,
-    //       36, 60, 36, 0, 39, 0, 48, 0]
-    //   }
-    // };
-    // fetch('clap.ogg').then((response) => {
-    //   response.arrayBuffer().then((arraybuffer) => {
-    // var ac = new AudioContext();
-    // ac.decodeAudioData(arraybuffer).then((clap) => {
-    //   var s = new S(ac, clap, track);
-    //   s.start();
-    // });
-    //   });
-    // });
-
-
 });
